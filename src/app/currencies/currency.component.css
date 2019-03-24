@@ -1,0 +1,12 @@
+:host{
+    width: 30%;
+}
+
+.currency-wrapper {
+    display: flex;
+    flex-direction: column;
+    border: 0.2em solid lime;
+    padding: 1em;
+    margin: 1em;
+    width: 100%;
+}
