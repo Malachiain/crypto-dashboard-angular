@@ -7,7 +7,7 @@ import { Observable } from 'rxjs';
 
 
 describe('Currency component', () => {
-  const spyCurrencyService = jasmine.createSpyObj('CurrencyService', {getSpot: Observable.create(obs => obs.next({data: {
+  const spyCurrencyService = jasmine.createSpyObj('CurrencyService', {getSpotStream: Observable.create(obs => obs.next({data: {
     base: 'BTC',
     currency: 'NZD',
     amount: 1542.00

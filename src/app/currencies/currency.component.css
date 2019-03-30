@@ -5,8 +5,29 @@
 .currency-wrapper {
     display: flex;
     flex-direction: column;
-    border: 0.2em solid lime;
+    border: 0.2em solid black;
+    transition: background-color 1000ms linear;
     padding: 1em;
     margin: 1em;
     width: 100%;
+}
+
+.currency-wrapper.updated {
+    transition: background-color 1000ms linear;
+    background-color: lime;
+}
+
+.currency-wrapper.increase {
+    transition: background-color 1000ms linear;
+    background-color:rgba(0,255,0, 0.3);
+}
+
+.currency-wrapper.drop {
+    transition: background-color 1000ms linear;
+    background-color:rgba(255,0,0, 0.3);
+}
+
+.currency-wrapper.hold {
+    transition: background-color 1000ms linear;
+    background-color:rgba(0,0,255, 0.3);
 }
