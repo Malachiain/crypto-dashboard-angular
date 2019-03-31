@@ -3,8 +3,8 @@
     'drop': updated && change < 0,
     'hold': updated && change === 0
 }" >
-    <h2>{{spotPrice.base}}</h2>
-    <span>Spot price: {{spotPrice.amount}} {{spotPrice.currency}} </span>
+    <h2>{{base}}</h2>
+    <span>Spot price: {{summary.latest}} {{summary.currency}} </span>
     <span>Last updated: {{lastUpdated | date:"medium"}}</span>
 
 </div>

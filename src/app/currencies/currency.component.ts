@@ -1,6 +1,5 @@
-import { Component } from '@angular/core';
-import { CurrencyService, Spot, SpotResponse } from './currency.service';
-import { timeout } from 'q';
+import { Component, Input } from '@angular/core';
+import { CurrencyService, Summary } from './currency.service';
 
 @Component({
   selector: 'currency',
@@ -9,29 +8,47 @@ import { timeout } from 'q';
 })
 export class CurrencyComponent {
 
-  private spotPrice: Spot = {base: '-', currency: '-', amount: "0"};
+  private summary: Summary =   {
+    "id": "",
+    "base": "-",
+    "name": "",
+    "currency": "",
+    "unit_price_scale": 2,
+    "market_cap": "",
+    "percent_change": 0,
+    "latest": "0"
+  }
+;
   private lastUpdated: Date;
   private updated: Boolean = false;
   private change: Number;
+
+  @Input() base: String;
 
   constructor(private currencyService: CurrencyService) {
     this.getSpotPrice();
   }
 
   getSpotPrice() {
-    this.currencyService.getSpotStream()
-    .subscribe((response: SpotResponse) => {
+    this.currencyService
+    .getSummaryStream()
+    .subscribe((summaryList: Summary[]) => {
       console.log("updated currency services");
-      const lastPrice = this.spotPrice.amount;
-      this.spotPrice = {...response.data};
-      if (lastPrice === this.spotPrice.amount) {
-        this.change = 0;
-      } else {
-        this.change = lastPrice > this.spotPrice.amount? -1: 1;
-      }
-      this.lastUpdated = new Date();
-      this.updated = true;
-      setTimeout(()=> this.updated =false, 5000); 
+  
+      const newSummary = summaryList
+      .filter(s => s.base === this.base)
+      .pop();
+      if ( newSummary) {
+        if (newSummary.latest === this.summary.latest) {
+          this.change = 0;
+        } else {
+          this.change = this.summary.latest > newSummary.latest? -1: 1;
+        }
+        this.summary = newSummary;
+        this.lastUpdated = new Date();
+        this.updated = true;
+        setTimeout(()=> this.updated =false, 5000); 
+    }
 
     
     });
