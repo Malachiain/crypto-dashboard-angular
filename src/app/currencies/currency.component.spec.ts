@@ -10,7 +10,7 @@ import { from } from 'rxjs';
 
 describe('Currency component', () => {
 
-const mockSumary =     {
+const mockSumary =     [{
   "id": "5b71fc48-3dd3-540c-809b-f8c94d0e68b5",
   "base": "BTC",
   "name": "Bitcoin",
@@ -19,7 +19,7 @@ const mockSumary =     {
   "market_cap": "71949117610.56",
   "percent_change": -0.0007772272214355038,
   "latest": "6003.58049706"
-};
+}];
 let summaryList;
 let summaryStream;
 

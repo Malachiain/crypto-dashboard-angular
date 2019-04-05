@@ -33,7 +33,6 @@ export class CurrencyComponent {
     this.currencyService
     .getSummaryStream()
     .subscribe((summaryList: Summary[]) => {
-      console.log("updated currency services");
   
       const newSummary = summaryList
       .filter(s => s.base === this.base)

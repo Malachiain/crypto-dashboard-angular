@@ -5,11 +5,13 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { CurrencyComponent } from './currencies/currency.component';
 import { HttpClientModule } from '@angular/common/http';
+import { CurrenciesComponent } from './currencies/currencies.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    CurrencyComponent
+    CurrencyComponent,
+    CurrenciesComponent
   ],
   imports: [
     BrowserModule,
