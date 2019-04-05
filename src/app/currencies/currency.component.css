@@ -1,15 +1,12 @@
-:host{
-    width: 30%;
-}
+
 
 .currency-wrapper {
     display: flex;
     flex-direction: column;
-    border: 0.2em solid black;
+    background-color: bisque;
     transition: background-color 1000ms linear;
     padding: 1em;
     margin: 1em;
-    width: 100%;
 }
 
 .currency-wrapper.updated {

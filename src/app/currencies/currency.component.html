@@ -3,8 +3,9 @@
     'drop': updated && change < 0,
     'hold': updated && change === 0
 }" >
-    <h2>{{base}}</h2>
+    <h2>{{base}} - {{summary.name}}</h2>
     <span>Spot price: {{summary.latest}} {{summary.currency}} </span>
+    <span>Market cap: {{summary.market_cap}} {{summary.currency}}</span>
+    <span>Change: {{summary.percent_change}} %</span>
     <span>Last updated: {{lastUpdated | date:"medium"}}</span>
-
 </div>
