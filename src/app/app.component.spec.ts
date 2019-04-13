@@ -2,6 +2,7 @@ import { TestBed, async } from '@angular/core/testing';
 import { RouterTestingModule } from '@angular/router/testing';
 import { AppComponent } from './app.component';
 import { MockCurrencieComponent } from './currencies/currencies.component';
+import { HeadComponent} from './head/head.component'
 import { HttpClientTestingModule } from '@angular/common/http/testing';
 import { CurrencyService} from './currencies/currency.service';
 import { By } from '@angular/platform-browser';
@@ -17,7 +18,8 @@ describe('AppComponent', () => {
       ],
       declarations: [
         AppComponent,
-        MockCurrencieComponent
+        MockCurrencieComponent,
+        HeadComponent
       ],
       providers: [
         {provide:CurrencyService, useValue: spyCurrencyService}
@@ -41,7 +43,7 @@ describe('AppComponent', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.debugElement.nativeElement;
-    expect(compiled.querySelector('h1').textContent).toContain('Cryptocurrency Dashboard!');
+    expect(compiled.querySelector('h1').textContent).toContain('CryptoDash');
   });
   it('should render the currencies component', () => {
     const fixture = TestBed.createComponent(AppComponent);

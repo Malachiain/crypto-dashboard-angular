@@ -1,7 +1,12 @@
+body {
+    background-color: whitesmoke;
+    margin: 0;
+}
 .main{ 
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     width: 100%;
+    background-color: whitesmoke;
 }

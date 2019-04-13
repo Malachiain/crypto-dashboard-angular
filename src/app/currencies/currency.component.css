@@ -1,30 +1,74 @@
-
+.spaced {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+   width:  80%;
+   margin-top: 1em;
+}
+.legend {
+   font-size: 0.7em;
+   font-weight: bolder;
+}
 
 .currency-wrapper {
     display: flex;
     flex-direction: column;
-    background-color: bisque;
-    transition: background-color 1000ms linear;
+    background-color:white;
+    transition: border  1000ms linear, background-color  1000ms linear;
+    align-items: center;
     padding: 1em;
     margin: 1em;
+    border: solid white 0.1em;
 }
 
-.currency-wrapper.updated {
-    transition: background-color 1000ms linear;
-    background-color: lime;
-}
 
-.currency-wrapper.increase {
-    transition: background-color 1000ms linear;
+
+
+
+.currency-wrapper.increase-updated {
     background-color:rgba(0,255,0, 0.3);
 }
 
-.currency-wrapper.drop {
-    transition: background-color 1000ms linear;
+.currency-wrapper.drop-updated {
     background-color:rgba(255,0,0, 0.3);
 }
 
-.currency-wrapper.hold {
-    transition: background-color 1000ms linear;
+.currency-wrapper.hold-updated {
     background-color:rgba(0,0,255, 0.3);
+}
+
+.currency-wrapper.increase {
+    border: solid 0.1em lime;
+}
+
+.currency-wrapper.drop {
+    border: solid 0.1em red;
+}
+
+.currency-wrapper.hold {
+    border: solid 0.1em blue;
+}
+
+.spot {
+    font-size: 1.5em;
+    color: black;
+    font-weight: 900;
+    transition: color 1000ms linear;
+}
+
+.spot.increase {
+    color: lime;
+}
+
+.spot.drop {
+    color: red;
+}
+
+.spot.hold {
+    color: blue;
+}
+
+.currency-name {
+    font-weight: 300;
+    font-size: 0.9em;
 }

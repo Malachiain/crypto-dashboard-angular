@@ -62,6 +62,6 @@ let summaryStream;
     from(summaryList);
     fixture.detectChanges();
     const compiled = fixture.debugElement.nativeElement;
-    expect(compiled.querySelector('h2').textContent).toContain('BTC');
+    expect(compiled.querySelector('h3').textContent).toContain('BTC');
   });
 });

@@ -6,12 +6,14 @@ import { AppComponent } from './app.component';
 import { CurrencyComponent } from './currencies/currency.component';
 import { HttpClientModule } from '@angular/common/http';
 import { CurrenciesComponent } from './currencies/currencies.component';
+import { HeadComponent } from './head/head.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     CurrencyComponent,
-    CurrenciesComponent
+    CurrenciesComponent,
+    HeadComponent
   ],
   imports: [
     BrowserModule,

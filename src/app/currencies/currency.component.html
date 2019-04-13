@@ -1,11 +1,16 @@
 <div class="currency-wrapper" [ngClass]="{
-    'increase': updated && change > 0,
-    'drop': updated && change < 0,
-    'hold': updated && change === 0
+    'increase-updated': updated && change > 0,
+    'drop-updated': updated && change < 0,
+    'hold-updated': updated && change === 0,
+    'increase': !updated && change > 0,
+    'drop': !updated && change < 0,
+    'hold': !updated && change === 0
 }" >
-    <h2>{{base}} - {{summary.name}}</h2>
-    <span>Spot price: {{summary.latest}} {{summary.currency}} </span>
-    <span>Market cap: {{summary.market_cap}} {{summary.currency}}</span>
-    <span>Change: {{summary.percent_change}} %</span>
-    <span>Last updated: {{lastUpdated | date:"medium"}}</span>
+    <h3 class="currency-name">{{base}} - {{summary.name}}</h3>
+    <span class="spot" [ngClass]="{
+    'increase': !updated && change > 0,
+    'drop': !updated && change < 0,
+    'hold': !updated && change === 0
+}"> {{summary.latest}} {{summary.currency}} </span>
+    <div class="spaced"><span class="legend">Updated</span> {{lastUpdated | date:"HH:mm:ss:sss"}}</div>
 </div>

@@ -1,0 +1,29 @@
+.head-wrapper {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+}
+.title {
+    color: black;
+    font-size: 1.5em;
+    font-weight: 700;
+    font-family: 'Times New Roman', Times, serif;
+    align-self: center;
+    margin: 1em 0;
+}
+.desciption {
+    margin-top: 0;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.increase {
+    color: lime;
+}
+
+.decrease {
+    color: red;
+}
+
+.hold {
+    color: blue;
+}
