@@ -13,10 +13,3 @@ export class CurrenciesComponent implements OnInit {
   }
 
 }
-
-@Component({
-  selector: 'currencies',
-  template: `<h2 id="test-currencies">MockCurrencies</h2>`
-})
-export class MockCurrencieComponent {
-}

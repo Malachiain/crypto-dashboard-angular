@@ -8,7 +8,7 @@ import { CurrencyService, Summary } from './currency.service';
 })
 export class CurrencyComponent {
 
-  private summary: Summary =   {
+  summary: Summary =   {
     "id": "",
     "base": "-",
     "name": "",
@@ -19,9 +19,9 @@ export class CurrencyComponent {
     "latest": "0"
   }
 ;
-  private lastUpdated: Date;
-  private updated: Boolean = false;
-  private change: Number;
+  lastUpdated: Date;
+  updated: Boolean = false;
+  change: Number;
 
   @Input() base: String;
 
@@ -55,10 +55,4 @@ export class CurrencyComponent {
 
 }
 
-@Component({
-  selector: 'currency',
-  template: `<h1>MockCurrency</h1>`
-})
-export class MockCurrencyComponent {
-}
 

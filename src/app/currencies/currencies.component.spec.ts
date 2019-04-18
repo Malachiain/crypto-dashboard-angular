@@ -1,7 +1,15 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { Component} from '@angular/core';
 
 import { CurrenciesComponent } from './currencies.component';
-import { MockCurrencyComponent } from './currency.component';
+
+@Component({
+  selector: 'currency',
+  template: `<h1>MockCurrency</h1>`
+})
+class MockCurrencyComponent {
+}
+
 
 describe('CurrenciesComponent', () => {
   let component: CurrenciesComponent;
