@@ -9,13 +9,15 @@ import { CurrenciesComponent } from './currencies/currencies.component';
 import { HeadComponent } from './head/head.component';
 import { ServiceWorkerModule } from '@angular/service-worker';
 import { environment } from '../environments/environment';
+import { FooterComponent } from './footer/footer.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     CurrencyComponent,
     CurrenciesComponent,
-    HeadComponent
+    HeadComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,22 @@
+.foot-wrapper {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    margin: 0.5em;
+}
+
+.desciption {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.increase {
+    color: lime;
+}
+
+.decrease {
+    color: red;
+}
+
+.hold {
+    color: blue;
+}

@@ -2,6 +2,7 @@
     display: flex;
     align-items: flex-start;
     flex-direction: column;
+    margin: 0.5em;
 }
 .title {
     color: black;
@@ -11,19 +12,10 @@
     align-self: center;
     margin: 1em 0;
 }
-.desciption {
+.sub-title {
     margin-top: 0;
+    opacity: 0.9;
+    color: grey;
+    font-size: 0.7em;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-}
-
-.increase {
-    color: lime;
-}
-
-.decrease {
-    color: red;
-}
-
-.hold {
-    color: blue;
 }

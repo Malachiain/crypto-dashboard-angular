@@ -2,13 +2,14 @@ import { TestBed, async } from '@angular/core/testing';
 import { RouterTestingModule } from '@angular/router/testing';
 import { AppComponent } from './app.component';
 import { HeadComponent} from './head/head.component'
+import { FooterComponent } from './footer/footer.component'
 import { HttpClientTestingModule } from '@angular/common/http/testing';
 import { CurrencyService} from './currencies/currency.service';
 import { By } from '@angular/platform-browser';
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'currencies',
+  selector: 'app-currencies',
   template: `<h2 id="test-currencies">MockCurrencies</h2>`
 })
 class MockCurrencieComponent {
@@ -26,7 +27,8 @@ describe('AppComponent', () => {
       declarations: [
         AppComponent,
         MockCurrencieComponent,
-        HeadComponent
+        HeadComponent,
+        FooterComponent
       ],
       providers: [
         {provide:CurrencyService, useValue: spyCurrencyService}
