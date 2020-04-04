@@ -39,7 +39,6 @@ export class CurrencyService {
 
   summaryStream : Observable<Summary[]>;
   getSpot = (http: HttpClient) => () => {
-    console.log("get spot called")
     return http
     .get<SummaryResponse>(this.spotUrl)
     .pipe(map(s => s.data));

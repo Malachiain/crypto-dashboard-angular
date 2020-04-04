@@ -59,7 +59,6 @@ describe('AppComponent', () => {
     fixture.detectChanges();
     const currencies = fixture.debugElement.query(By.css('#test-currencies'));
     const compiled = currencies.nativeElement;
-    console.log(compiled)
     expect(compiled.textContent).toContain('MockCurrencies');
   });
 });
