@@ -1,4 +1,4 @@
-import { TestBed, async } from '@angular/core/testing';
+import { TestBed, waitForAsync } from '@angular/core/testing';
 import { RouterTestingModule } from '@angular/router/testing';
 import { CurrencyComponent } from './currency.component';
 import { HttpClientTestingModule } from '@angular/common/http/testing';
@@ -25,7 +25,7 @@ let summaryStream;
 
 
   let spyCurrencyService;
-  beforeEach(async(() => {
+  beforeEach(waitForAsync(() => {
     summaryList = [mockSumary];
     summaryStream = from(summaryList);
     spyCurrencyService = jasmine.createSpyObj('CurrencyService', {getSummaryStream: summaryStream})
